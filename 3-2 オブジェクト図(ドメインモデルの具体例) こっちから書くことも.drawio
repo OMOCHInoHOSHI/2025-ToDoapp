@@ -1,38 +1,14 @@
 <mxfile host="65bd71144e">
     <diagram id="E-xOn_eW-BrYlavdOUFD" name="ページ1">
-        <mxGraphModel dx="746" dy="499" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="1">
+        <mxGraphModel dx="544" dy="344" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="1">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="3" value="" style="endArrow=none;html=1;" edge="1" parent="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="120" y="340" as="sourcePoint"/>
-                        <mxPoint x="120" y="40" as="targetPoint"/>
-                    </mxGeometry>
+                <mxCell id="9" value="(ユーザ&lt;span style=&quot;background-color: transparent;&quot;&gt;)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;アカウント名：&lt;br&gt;すもも&lt;br&gt;メールアドレス：exam@gmail.com&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="320" width="150" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="" style="endArrow=none;html=1;" edge="1" parent="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="120" y="40" as="sourcePoint"/>
-                        <mxPoint x="240" y="40" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5" value="" style="endArrow=none;html=1;" edge="1" parent="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="120" y="340" as="sourcePoint"/>
-                        <mxPoint x="240" y="340" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="6" value="" style="endArrow=none;html=1;" edge="1" parent="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="240" y="140" as="sourcePoint"/>
-                        <mxPoint x="240" y="40" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="7" value="" style="endArrow=none;html=1;" edge="1" parent="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="240" y="340" as="sourcePoint"/>
-                        <mxPoint x="240" y="240" as="targetPoint"/>
-                    </mxGeometry>
+                <mxCell id="10" value="(タスク登録)&lt;div&gt;タスク名：メール整理&lt;/div&gt;&lt;div&gt;タスク内容：メールに来てる内容を確認&lt;/div&gt;&lt;div&gt;タスクジャンル：就活&lt;/div&gt;&lt;div&gt;タスク完了ステータス：未完了&lt;/div&gt;&lt;div&gt;タスク進捗度：０%&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="180" width="230" height="100" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
