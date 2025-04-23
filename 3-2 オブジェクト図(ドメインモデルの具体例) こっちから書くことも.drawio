@@ -1,9 +1,18 @@
 <mxfile host="65bd71144e">
     <diagram id="E-xOn_eW-BrYlavdOUFD" name="ページ1">
-        <mxGraphModel dx="995" dy="413" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="1">
+        <mxGraphModel dx="811" dy="554" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="1">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
+                <mxCell id="18" style="edgeStyle=none;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=none;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=none;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="9" value="(ユーザ&lt;span style=&quot;background-color: transparent;&quot;&gt;)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;アカウント名：&lt;br&gt;すもも&lt;br&gt;メールアドレス：exam@gmail.com&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="140" y="320" width="150" height="90" as="geometry"/>
                 </mxCell>
@@ -11,7 +20,13 @@
                     <mxGeometry x="380" y="130" width="240" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="11" value="(タスク編集)&lt;div&gt;タスク名：メール整理&lt;/div&gt;&lt;div&gt;タスク内容：メールに来た就活関連を確認&lt;/div&gt;&lt;div&gt;タスクジャンル：就活&lt;/div&gt;&lt;div&gt;タスク完了ステータス：未完了&lt;/div&gt;&lt;div&gt;タスク進捗度：20%&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="380" y="340" width="240" height="105" as="geometry"/>
+                    <mxGeometry x="380" y="460" width="240" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="20" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="(タスク検索)&lt;div&gt;タスクジャンル：就活&lt;/div&gt;&lt;div&gt;タスク内容：確認&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="320" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
