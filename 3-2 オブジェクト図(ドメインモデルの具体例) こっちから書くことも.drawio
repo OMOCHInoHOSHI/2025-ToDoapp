@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="E-xOn_eW-BrYlavdOUFD" name="ページ1">
-        <mxGraphModel dx="544" dy="344" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="1">
+        <mxGraphModel dx="995" dy="413" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="1">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -8,7 +8,10 @@
                     <mxGeometry x="140" y="320" width="150" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="10" value="(タスク登録)&lt;div&gt;タスク名：メール整理&lt;/div&gt;&lt;div&gt;タスク内容：メールに来てる内容を確認&lt;/div&gt;&lt;div&gt;タスクジャンル：就活&lt;/div&gt;&lt;div&gt;タスク完了ステータス：未完了&lt;/div&gt;&lt;div&gt;タスク進捗度：０%&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="360" y="180" width="230" height="100" as="geometry"/>
+                    <mxGeometry x="380" y="130" width="240" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="(タスク編集)&lt;div&gt;タスク名：メール整理&lt;/div&gt;&lt;div&gt;タスク内容：メールに来た就活関連を確認&lt;/div&gt;&lt;div&gt;タスクジャンル：就活&lt;/div&gt;&lt;div&gt;タスク完了ステータス：未完了&lt;/div&gt;&lt;div&gt;タスク進捗度：20%&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="340" width="240" height="105" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
