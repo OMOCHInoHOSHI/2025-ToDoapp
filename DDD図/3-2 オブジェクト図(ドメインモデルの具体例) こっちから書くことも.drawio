@@ -1,0 +1,43 @@
+<mxfile host="65bd71144e">
+    <diagram id="E-xOn_eW-BrYlavdOUFD" name="ページ1">
+        <mxGraphModel dx="1066" dy="713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="1">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="9" value="(ユーザ&lt;span style=&quot;background-color: transparent;&quot;&gt;)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;アカウント名：&lt;br&gt;すもも&lt;br&gt;メールアドレス：exam@gmail.com&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="320" width="150" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="(タスク登録)&lt;div&gt;タスク名：メール整理&lt;/div&gt;&lt;div&gt;タスク内容：メールに来てる内容を確認&lt;/div&gt;&lt;div&gt;タスクジャンル：就活&lt;/div&gt;&lt;div&gt;タスク完了ステータス：未完了&lt;/div&gt;&lt;div&gt;タスク進捗度：０%&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="130" width="240" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="(タスク編集)&lt;div&gt;タスク名：メール整理&lt;/div&gt;&lt;div&gt;タスク内容：メールに来た就活関連を確認&lt;/div&gt;&lt;div&gt;タスクジャンル：就活&lt;/div&gt;&lt;div&gt;タスク完了ステータス：未完了&lt;/div&gt;&lt;div&gt;タスク進捗度：20%&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="460" width="240" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="edgeStyle=none;html=1;dashed=1;" edge="1" parent="1" source="20" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="(タスク検索)&lt;div&gt;タスクジャンル：就活&lt;/div&gt;&lt;div&gt;タスク内容：確認&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="320" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="endArrow=none;html=1;rounded=0;exitX=0.95;exitY=0.023;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.026;entryY=0.954;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="9" target="10">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="310" y="300" as="sourcePoint"/>
+                        <mxPoint x="470" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.013;entryY=0.11;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="9" target="11">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="290" y="430" as="sourcePoint"/>
+                        <mxPoint x="450" y="430" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="20">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="300" y="360" as="sourcePoint"/>
+                        <mxPoint x="450" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
