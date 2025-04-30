@@ -10,7 +10,12 @@ export class TaskCreateTime {
     }
 
     // 作成日時を取得するメソッド
-    public getTaskCreateTime(): Date {
+    get TaskCreateTime(): Date {
         return this.task_createdAt;
+    }
+
+    // 作成日時を設定するメソッド
+    set TaskCreateTime(task_createdAt: Date) {
+        this.task_createdAt = task_createdAt;
     }
 }

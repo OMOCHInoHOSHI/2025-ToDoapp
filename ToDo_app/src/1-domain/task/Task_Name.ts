@@ -9,7 +9,12 @@ export class TaskName{
     }
 
     // タスクのタイトルを取得するメソッド
-    public getTaskName(): string {
+    get TaskName(): string {
         return this.task_title;
+    }
+
+    // タスクのタイトルを設定するメソッド
+    set TaskName(task_title: string) {
+        this.task_title = task_title;
     }
 }

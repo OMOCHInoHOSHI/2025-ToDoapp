@@ -9,7 +9,12 @@ export class TaskContent {
     }
 
     // タスクの内容を取得するメソッド
-    public getTaskContent(): string {
+    get TaskContent(): string {
         return this.task_content;
+    }
+
+    // タスクの内容を設定するメソッド
+    set TaskContent(task_content: string) {
+        this.task_content = task_content;
     }
 }

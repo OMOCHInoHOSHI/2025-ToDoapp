@@ -9,12 +9,12 @@ export class TaskID {
     }
 
     // タスクIDを取得するメソッド
-    public getTaskID(): string {
+    get TaskID(): string {
         return this.task_id;
     }
 
     // タスクIDを設定するメソッド
-    public setTaskID(task_id: string): void {
+    set TaskID(task_id: string) {
         this.task_id = task_id;
     }
 }
