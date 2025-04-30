@@ -1,27 +1,31 @@
+// タスクの進捗度を管理
 export class TaskProgress {
-    // タスクの進捗度 (例: 0% - 100%)
-    private task_progress: number;
+    private _progress: number;
 
-    // コンストラクタ
-    constructor(task_progress: number) {
-        if (task_progress < 0 || task_progress > 100) {
-            throw new Error("タスクの進捗度は0から100の間で指定してください。");
-        }
-        this.task_progress = task_progress;
+    // タスク進捗度 (例: 0% - 100%)
+    constructor(progress: number) {
+        this.assertValidProgress(progress);
+        this._progress = progress;
     }
 
-    // 進捗度を取得するメソッド
-    public getProgress(): number {
-        return this.task_progress;
+    // タスク進捗度を取得するメソッド
+    // getterメソッド
+     get progress(): number {
+        return this._progress;
     }
 
-    // 進捗度を設定するメソッド
-    public setProgress(task_progress: number): void {
-        // バリデーション
-        // 進捗度は0から100の間で指定する
-        if (task_progress < 0 || task_progress > 100) {
-            throw new Error("タスクの進捗度は0から100の間で指定してください。");
-        }
-        this.task_progress = task_progress;
+    // タスク進捗度を設定するメソッド
+    // setterメソッド
+    set progress(newProgress: number) {
+        this.assertValidProgress(newProgress);
+        this._progress = newProgress;
     }
+
+    // タスク進捗度のバリデーションを行うメソッド
+    // 0~100
+    private assertValidProgress(progress: number): void {
+        if (progress < 0 || progress > 100) {
+        throw new Error("タスクの進捗度は0から100の間で指定してください。");
+    }
+  }
 }
