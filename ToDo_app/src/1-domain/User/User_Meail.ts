@@ -1,5 +1,5 @@
 // ユーザーのメールアドレスを表すクラス
-export class UserID {
+export class  UserMeail{
 
     // ユーザーのメールアドレス
     private email: string;
