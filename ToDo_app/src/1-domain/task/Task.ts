@@ -19,6 +19,7 @@ export class Task {
 
     // タスクの進捗度 (例: 0% - 100%)
     private task_progress: number;
+
     // 期限日時
     private task_dueDate?: Date;
 
@@ -36,6 +37,10 @@ export class Task {
         task_dueDate?: Date,
         task_isCompleted: boolean = false
     ){
+        // バリデーション
+        if (task_progress < 0 || task_progress > 100) {
+            throw new Error("タスクの進捗度は0から100の間で指定してください。");
+        }
         this.task_id = task_id;
         this.task_title = task_title;
         this.task_content = task_content;
