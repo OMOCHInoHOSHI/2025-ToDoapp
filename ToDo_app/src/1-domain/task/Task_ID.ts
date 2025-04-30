@@ -11,4 +11,9 @@ export class TaskID {
     public getTaskID(): string {
         return this.task_id;
     }
+
+    // タスクIDを設定するメソッド
+    public setTaskID(task_id: string): void {
+        this.task_id = task_id;
+    }
 }
