@@ -42,4 +42,15 @@ export class Task {
         this._taskFinishFlag = taskFinishFlag;
         this._taskCreateTime = taskCreateTime;
     }
+
+    // タスク進捗度が100%の時、完了ステータスを完了にする
+    // ビジネスルール
+    public updateProgress(newProgress: TaskProgress): void {
+        this._taskProgress = newProgress;
+
+        // 進捗度が100%なら完了フラグを true にする
+        if (newProgress.progress === 100) {
+            this._taskFinishFlag = new TaskFinishFlag(true);
+        }
+    }
 }
