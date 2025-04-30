@@ -15,7 +15,7 @@ export class Task {
     // タスクの状態を管理するためのプロパティ
     private _taskID: TaskID;        // タスクID
     private _taskName: TaskName;    // タスク名
-    private _taskContent: TaskContent;// タスク内容
+    private _taskContent: TaskContent | undefined; // タスク内容 (undefined許容)
     private _taskGenre: TaskGenre;  // タスクジャンル
     private _taskProgress: TaskProgress;    // タスク進捗度
     private _taskDueDate: TaskDueDate;  // タスクの期限
@@ -26,7 +26,7 @@ export class Task {
     constructor(
         taskID: TaskID,
         taskName: TaskName,
-        taskContent: TaskContent,
+        taskContent: TaskContent | undefined,
         taskGenre: TaskGenre,
         taskProgress: TaskProgress,
         taskDueDate: TaskDueDate,
