@@ -1,54 +1,45 @@
-// ドメインモデルを定義する
+// タスク集約
+// タスクの状態を管理する
 
-// タスクのドメインモデルを定義
+import { TaskCreateTime } from "./Task_CreateTime";
+import { TaskID } from "./Task_ID";
+import { TaskName } from "./Task_Name";
+import { TaskContent } from "./Task_Content";
+import { TaskGenre } from "./Task_Genre";
+import { TaskProgress } from "./Task_Progress";
+import { TaskDueDate } from "./Task_DueDate";
+import { TaskFinishFlag } from "./Task_FinishFlag";
+
 export class Task {
-    // 作成日時
-    private task_createdAt: Date;
-    
-    // タスクID
-    private task_id: string;
 
-    // タスクのタイトル
-    private task_title: string;
-
-    // タスクのの内容
-    private task_content: string;
-
-    // タスクのジャンル (例: 仕事, プライベート)進捗度
-    private task_genre: string;
-
-    // タスクの進捗度 (例: 0% - 100%)
-    private task_progress: number;
-
-    // 期限日時
-    private task_dueDate?: Date;
-
-    // タスク完了ステータス
-    private task_isCompleted: boolean;
+    // タスクの状態を管理するためのプロパティ
+    private _taskID: TaskID;        // タスクID
+    private _taskName: TaskName;    // タスク名
+    private _taskContent: TaskContent;// タスク内容
+    private _taskGenre: TaskGenre;  // タスクジャンル
+    private _taskProgress: TaskProgress;    // タスク進捗度
+    private _taskDueDate: TaskDueDate;  // タスクの期限
+    private _taskFinishFlag: TaskFinishFlag;    // タスク完了フラグ
+    private _taskCreateTime: TaskCreateTime;    // タスク作成時間
 
     // コンストラクタ
     constructor(
-        task_id: string,
-        task_title: string,
-        task_content: string,
-        task_genre: string,
-        task_progress: number,
-        task_createdAt: Date,
-        task_dueDate?: Date,
-        task_isCompleted: boolean = false
-    ){
-        // バリデーション
-        if (task_progress < 0 || task_progress > 100) {
-            throw new Error("タスクの進捗度は0から100の間で指定してください。");
-        }
-        this.task_id = task_id;
-        this.task_title = task_title;
-        this.task_content = task_content;
-        this.task_genre = task_genre;
-        this.task_progress = task_progress;
-        this.task_createdAt = task_createdAt;
-        this.task_dueDate = task_dueDate;
-        this.task_isCompleted = task_isCompleted;
+        taskID: TaskID,
+        taskName: TaskName,
+        taskContent: TaskContent,
+        taskGenre: TaskGenre,
+        taskProgress: TaskProgress,
+        taskDueDate: TaskDueDate,
+        taskFinishFlag: TaskFinishFlag,
+        taskCreateTime: TaskCreateTime
+    ) {
+        this._taskID = taskID;
+        this._taskName = taskName;
+        this._taskContent = taskContent;
+        this._taskGenre = taskGenre;
+        this._taskProgress = taskProgress;
+        this._taskDueDate = taskDueDate;
+        this._taskFinishFlag = taskFinishFlag;
+        this._taskCreateTime = taskCreateTime;
     }
-
 }
