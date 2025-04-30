@@ -1,4 +1,5 @@
 // タスクの進捗度を管理
+// タスク進捗度のビジネスルール(ドメインロジック)を実装するクラス
 export class TaskProgress {
     private _progress: number;
 
@@ -21,8 +22,7 @@ export class TaskProgress {
         this._progress = newProgress;
     }
 
-    // タスク進捗度のバリデーションを行うメソッド
-    // 0~100
+    // タスク進捗度のバリデーションを
     private assertValidProgress(progress: number): void {
         if (progress < 0 || progress > 100) {
         throw new Error("タスクの進捗度は0から100の間で指定してください。");

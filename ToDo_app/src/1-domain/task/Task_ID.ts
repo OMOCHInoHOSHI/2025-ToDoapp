@@ -1,3 +1,4 @@
+// タスクIDクラス
 export class TaskID {
     // タスクID
     private task_id: string;

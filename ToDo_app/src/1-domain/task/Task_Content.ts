@@ -1,3 +1,4 @@
+// タスクIDクラス
 export class TaskContent {
     // タスクの内容
     private task_content: string;

@@ -1,3 +1,5 @@
+// タスク作成時クラス
+
 export class TaskCreateTime {
     // 作成日時
     private task_createdAt: Date;

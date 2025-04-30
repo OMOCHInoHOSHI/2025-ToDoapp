@@ -1,3 +1,4 @@
+// タスクジャンルのドメインロジックを定義するクラス
 export class TaskGenre{
     // タスクのジャンル (例: 仕事, プライベート)
     private task_genre: string;
