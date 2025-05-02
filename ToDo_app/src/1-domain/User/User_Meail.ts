@@ -1,21 +1,21 @@
-// ユーザーのメールアドレスを表すクラス
-export class  UserMeail{
+// // ユーザーのメールアドレスを表すクラス
+// export class  UserMeail{
 
-    // ユーザーのメールアドレス
-    private email: string;
+//     // ユーザーのメールアドレス
+//     private email: string;
 
-    // コンストラクタ
-    constructor(email: string) {
-        this.email = email;
-    }
+//     // コンストラクタ
+//     constructor(email: string) {
+//         this.email = email;
+//     }
 
-    // メールアドレスを取得するメソッド
-    get emailAddress(): string {
-        return this.email;
-    }
+//     // メールアドレスを取得するメソッド
+//     get emailAddress(): string {
+//         return this.email;
+//     }
 
-    // メールアドレスを設定するメソッド
-    set emailAddress(email: string) {
-        this.email = email;
-    }
-}
+//     // メールアドレスを設定するメソッド
+//     set emailAddress(email: string) {
+//         this.email = email;
+//     }
+// }

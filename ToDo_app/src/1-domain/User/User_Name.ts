@@ -1,5 +1,5 @@
+// 使うの辞めたファイル
 // ユーザー名のクラス
-
 export class UserName {
     private name: string;
 
