@@ -14,11 +14,13 @@ import { TaskRepository } from "../../../1-domain/task/Task_Repository";
 export class UseCaseCreateTask {
     private taskRepository: TaskRepository;
 
+    // タスクリポジトリをコンストラクタで受け取る
+    // 依存性の注入（DI）を行うことで、テストやモックの作成が容易になる
     constructor(taskRepository: TaskRepository) {
         this.taskRepository = taskRepository;
     }
 
-    public execute(input: CreateTaskInput): Task {
+    public Use_CreateTask(input: CreateTaskInput): Task {
         // 各値オブジェクトを生成
         const taskCreateTime = new TaskCreateTime(new Date());
         const taskID = new TaskID(TaskCreateTime.toString()); // タスクIDは作成日時を基に生成 日時を文字に変換
