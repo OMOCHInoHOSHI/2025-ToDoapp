@@ -20,14 +20,14 @@ export class UseCaseCreateTask {
 
     public execute(input: CreateTaskInput): Task {
         // 各値オブジェクトを生成
-        const taskID = new TaskID(); // IDは自動生成
+        const taskCreateTime = new TaskCreateTime(new Date());
+        const taskID = new TaskID(TaskCreateTime.toString()); // タスクIDは作成日時を基に生成 日時を文字に変換
         const taskName = new TaskName(input.name);
         const taskContent = input.content ? new TaskContent(input.content) : undefined;
         const taskGenre = new TaskGenre(input.genre);
         const taskProgress = new TaskProgress(0); // 初期進捗度は0%
         const taskDueDate = new TaskDueDate(input.dueDate);
         const taskFinishFlag = new TaskFinishFlag(false); // 初期状態は未完了
-        const taskCreateTime = new TaskCreateTime(new Date());
 
         // タスクを生成
         const task = new Task(
