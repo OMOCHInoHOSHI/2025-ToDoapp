@@ -19,6 +19,9 @@ export interface TaskRepository {
     // タスクを全て取得する
     FindAll(): Promise<Task[]>;
 
+    // タスクを更新する
+    UpdateTask(task: Task): void;
+
     // タスクを削除する
     DeleteTask(taskId: TaskID): Promise<void>;
 }
