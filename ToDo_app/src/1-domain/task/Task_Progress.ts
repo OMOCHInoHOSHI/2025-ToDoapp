@@ -11,13 +11,13 @@ export class TaskProgress {
 
     // タスク進捗度を取得するメソッド
     // getterメソッド
-     get progress(): number {
+     get TaskProgress(): number {
         return this._progress;
     }
 
     // タスク進捗度を設定するメソッド
     // setterメソッド
-    set progress(newProgress: number) {
+    set TaskProgress(newProgress: number) {
         this.assertValidProgress(newProgress);
         this._progress = newProgress;
     }

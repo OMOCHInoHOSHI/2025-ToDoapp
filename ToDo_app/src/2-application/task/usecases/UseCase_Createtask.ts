@@ -20,10 +20,14 @@ export class UseCaseCreateTask {
         this.taskRepository = taskRepository;
     }
 
+    // タスクを作成するメソッド
+    // input:CreateTaskInput タスク作成に必要な情報を持つオブジェクト
+    // 戻り値:Task 作成されたタスクオブジェクト
     public Use_CreateTask(input: CreateTaskInput): Task {
         // 各値オブジェクトを生成
+        // setterを使用して値オブジェクトを生成
         const taskCreateTime = new TaskCreateTime(new Date());
-        const taskID = new TaskID(TaskCreateTime.toString()); // タスクIDは作成日時を基に生成 日時を文字に変換
+        const taskID = new TaskID(taskCreateTime.TaskCreateTime.toString()); // タスクIDは作成日時を基に生成 日時を文字に変換
         const taskName = new TaskName(input.name);
         const taskContent = input.content ? new TaskContent(input.content) : undefined;
         const taskGenre = new TaskGenre(input.genre);
