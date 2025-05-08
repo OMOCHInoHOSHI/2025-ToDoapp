@@ -43,6 +43,43 @@ export class Task {
         this._taskCreateTime = taskCreateTime;
     }
 
+    // ゲッターS---------------------------------------------------------
+    // ここにもgetterを使うことで、プロパティにアクセスする際にメソッドを呼び出すような形になる
+    // カプセル化のため
+    public get TaskID(): TaskID {
+        return this._taskID;
+    }
+
+    public get TaskCreateTime(): TaskCreateTime {
+        return this._taskCreateTime;
+    }
+
+    public get TaskName(): TaskName {
+        return this._taskName;
+    }
+
+    public get TaskContent(): TaskContent | undefined {
+        return this._taskContent;
+    }
+
+    public get TaskGenre(): TaskGenre {
+        return this._taskGenre;
+    }
+
+    public get TaskProgress(): TaskProgress {
+        return this._taskProgress;
+    }
+
+    public get TaskDueDate(): TaskDueDate {
+        return this._taskDueDate;
+    }
+
+    public get TaskFinishFlag(): TaskFinishFlag {
+        return this._taskFinishFlag;
+    }
+    // ゲッターE---------------------------------------------------------
+
+
     // タスク進捗度が100%の時、完了ステータスを完了にする
     // ビジネスルール
     public updateProgress(newProgress: TaskProgress): void {

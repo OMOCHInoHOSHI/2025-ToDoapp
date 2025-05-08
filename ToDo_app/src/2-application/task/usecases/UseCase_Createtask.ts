@@ -25,6 +25,7 @@ export class UseCaseCreateTask {
     // 戻り値:Task 作成されたタスクオブジェクト
     public Use_CreateTask(input: CreateTaskInput): Task {
         // 各値オブジェクトを生成
+        // setterを使用して値オブジェクトを生成
         const taskCreateTime = new TaskCreateTime(new Date());
         const taskID = new TaskID(taskCreateTime.TaskCreateTime.toString()); // タスクIDは作成日時を基に生成 日時を文字に変換
         const taskName = new TaskName(input.name);
