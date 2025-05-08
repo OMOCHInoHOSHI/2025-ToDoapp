@@ -1,3 +1,7 @@
+// TaskDtoとの変換を行う
+// ドメイン層（Taskエンティティ）とDTO層（TaskDto）の相互変換を担うマッパー
+// プレゼンテーション層とドメイン層の依存を切り離し、カプセル化を維持するために使用
+
 import { Task } from "../../1-domain/task/Task";
 import { TaskCreateTime } from "../../1-domain/task/Task_CreateTime";
 import { TaskID } from "../../1-domain/task/Task_ID";
@@ -9,8 +13,10 @@ import { TaskDueDate } from "../../1-domain/task/Task_DueDate";
 import { TaskFinishFlag } from "../../1-domain/task/Task_FinishFlag";
 import { TaskDto } from "./TaskDto";
 
+// ドメインエンティティ Task <-> DTO TaskDto の変換
 export const TaskMapper = {
     toDto(task: Task): TaskDto {
+        // TaskDtoに変換する
         return {
             taskID: task.TaskID.TaskID,
             taskName: task.TaskName.TaskName,
@@ -23,6 +29,7 @@ export const TaskMapper = {
         };
     },
 
+    // DTO TaskDto から ドメインエンティティ Task に変換する
     fromDto(dto: TaskDto): Task {
         return new Task(
             new TaskCreateTime(new Date(dto.taskCreateTime)),
