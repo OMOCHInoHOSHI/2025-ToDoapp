@@ -18,7 +18,8 @@ export class LocalStorageTaskRepository implements TaskRepository {
     // タスクを取得する
     public async FindTaskId(taskId: TaskID): Promise<Task | null> {
         const tasks = await this.FindAll(); // すべてのタスクを取得
-        return tasks.find(task => task === taskId.TaskID) || null; // タスクIDでフィルタリング
+        const task = tasks.find(t => t.TaskID.TaskID === taskId.TaskID); // タスクIDでフィルタリング
+        return task ? task : null; // タスクが見つからなければnullを返す
     }
 
     // タスクを全て取得する
@@ -26,17 +27,15 @@ export class LocalStorageTaskRepository implements TaskRepository {
         const tasks = localStorage.getItem(this.storageKey); // ローカルストレージから取得
         return tasks ? JSON.parse(tasks) : []; // 取得したタスクをパースして返す
     }
-    
+
     // タスクを更新する
-    public UpdateTask(task: Task): void {
-        const tasks = this.FindAll(); // すべてのタスクを取得
-        const index = tasks.findIndex(t => t.TaskID.TaskID === task.TaskID.TaskID); // 更新するタスクのインデックスを取得
-        if (index !== -1) {
-            tasks[index] = task; // タスクを更新
-            localStorage.setItem(this.storageKey, JSON.stringify(tasks)); // ローカルストレージに保存
-        }
+    public async UpdateTask(task: Task): Promise<void> {
+        const tasks = await this.FindAll(); // すべてのタスクを取得
+        const updatedTasks = tasks.map(t => t.TaskID.TaskID === task.TaskID.TaskID ? task : t); // タスクIDでフィルタリングして更新
+        localStorage.setItem(this.storageKey, JSON.stringify(updatedTasks)); // ローカルストレージに保存
     }
-    
+
+
     // タスクを削除する
     public async DeleteTask(taskId: TaskID): Promise<void> {
         const tasks = await this.FindAll(); // すべてのタスクを取得
