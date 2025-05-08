@@ -13,6 +13,7 @@ import { TaskFinishFlag } from "./Task_FinishFlag";
 export class Task {
 
     // タスクの状態を管理するためのプロパティ
+    private _taskCreateTime: TaskCreateTime;    // タスク作成時間
     private _taskID: TaskID;        // タスクID
     private _taskName: TaskName;    // タスク名
     private _taskContent: TaskContent | undefined; // タスク内容 (undefined許容)
@@ -20,10 +21,10 @@ export class Task {
     private _taskProgress: TaskProgress;    // タスク進捗度
     private _taskDueDate: TaskDueDate;  // タスクの期限
     private _taskFinishFlag: TaskFinishFlag;    // タスク完了フラグ
-    private _taskCreateTime: TaskCreateTime;    // タスク作成時間
 
     // コンストラクタ
     constructor(
+        taskCreateTime: TaskCreateTime,
         taskID: TaskID,
         taskName: TaskName,
         taskContent: TaskContent | undefined,
@@ -31,8 +32,8 @@ export class Task {
         taskProgress: TaskProgress,
         taskDueDate: TaskDueDate,
         taskFinishFlag: TaskFinishFlag,
-        taskCreateTime: TaskCreateTime
     ) {
+        this._taskCreateTime = taskCreateTime;
         this._taskID = taskID;
         this._taskName = taskName;
         this._taskContent = taskContent;
@@ -40,7 +41,6 @@ export class Task {
         this._taskProgress = taskProgress;
         this._taskDueDate = taskDueDate;
         this._taskFinishFlag = taskFinishFlag;
-        this._taskCreateTime = taskCreateTime;
     }
 
     // ゲッターS---------------------------------------------------------

@@ -9,12 +9,12 @@ export class TaskGenre{
     }
 
     // ジャンルを取得するメソッド
-    get genre(): string {
+    get TaskGenre(): string {
         return this.task_genre;
     }
 
     // ジャンルを設定するメソッド
-    set genre(task_genre: string) {
+    set TaskGenre(task_genre: string) {
         this.task_genre = task_genre;
     }
 }
