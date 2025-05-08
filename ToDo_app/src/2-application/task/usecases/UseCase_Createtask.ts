@@ -37,6 +37,7 @@ export class UseCaseCreateTask {
 
         // タスクを生成
         const task = new Task(
+            taskCreateTime,
             taskID,
             taskName,
             taskContent,
@@ -44,7 +45,6 @@ export class UseCaseCreateTask {
             taskProgress,
             taskDueDate,
             taskFinishFlag,
-            taskCreateTime
         );
 
         // リポジトリにタスクを保存

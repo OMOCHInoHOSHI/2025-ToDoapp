@@ -28,6 +28,7 @@ export class TaskFactory {
 
         // タスクの状態を管理するためのプロパティを初期化する
         return new Task(
+        taskCreateTime,
         taskID,
         taskName,
         taskContent,
@@ -35,7 +36,6 @@ export class TaskFactory {
         taskProgress,
         taskDueDate,
         taskFinishFlag,
-        taskCreateTime
         );
     }
 }
