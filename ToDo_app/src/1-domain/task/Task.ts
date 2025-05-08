@@ -86,7 +86,7 @@ export class Task {
         this._taskProgress = newProgress;
 
         // 進捗度が100%なら完了フラグを true にする
-        if (newProgress.progress === 100) {
+        if (newProgress.TaskProgress === 100) {
             this._taskFinishFlag = new TaskFinishFlag(true);
         }
     }
