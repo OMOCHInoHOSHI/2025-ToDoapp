@@ -18,14 +18,14 @@ export const TaskMapper = {
     toDto(task: Task): TaskDto {
         // TaskDtoに変換する
         return {
+            taskCreateTime: task.TaskCreateTime.TaskCreateTime.toISOString(),
             taskID: task.TaskID.TaskID,
             taskName: task.TaskName.TaskName,
             taskContent: task.TaskContent?.TaskContent,
             taskGenre: task.TaskGenre.TaskGenre,
             taskProgress: task.TaskProgress.TaskProgress,
             taskDueDate: task.TaskDueDate.TaskDueDate.toISOString(),
-            taskFinishFlag: task.TaskFinishFlag.TaskFinishFlag,
-            taskCreateTime: task.TaskCreateTime.TaskCreateTime.toISOString()
+            taskFinishFlag: task.TaskFinishFlag.TaskFinishFlag
         };
     },
 
