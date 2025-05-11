@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="LQAXXgF4HWlI1jR32HYM" name="ページ1">
-        <mxGraphModel dx="1260" dy="644" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1091" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -34,7 +34,7 @@
                 <mxCell id="12" value="ログイン" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="320" y="290" width="85" height="43" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="タスク登録" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                <mxCell id="13" value="タスク作成" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
                     <mxGeometry x="237.5" y="618.5" width="140" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="14" value="タスク一覧" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
@@ -166,34 +166,34 @@
                         <mxPoint x="700" y="1021" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="152" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;" vertex="1" parent="1">
+                <mxCell id="152" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;" parent="1" vertex="1">
                     <mxGeometry x="780" y="892" width="370" height="260" as="geometry"/>
                 </mxCell>
-                <mxCell id="153" value="タスク個別表示" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="153" value="タスク個別表示" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="790" y="832" width="110" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="154" value="タスク名&lt;br&gt;タスク内容&lt;div&gt;タスクジャンル&lt;/div&gt;&lt;div&gt;進捗度&lt;/div&gt;&lt;div&gt;期日&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                <mxCell id="154" value="タスク名&lt;br&gt;タスク内容&lt;div&gt;タスクジャンル&lt;/div&gt;&lt;div&gt;進捗度&lt;/div&gt;&lt;div&gt;期日&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
                     <mxGeometry x="824.1" y="922" width="195.9" height="210" as="geometry"/>
                 </mxCell>
-                <mxCell id="155" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;タスク編集&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=right;" vertex="1" parent="1">
+                <mxCell id="155" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;タスク編集&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=right;" parent="1" vertex="1">
                     <mxGeometry x="1048.5" y="931.3699999999999" width="77.5" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="157" value="ゴミ箱" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.box;" vertex="1" parent="1">
+                <mxCell id="157" value="ゴミ箱" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.box;" parent="1" vertex="1">
                     <mxGeometry x="1075" y="1072" width="35" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="161" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.compose;" vertex="1" parent="1">
+                <mxCell id="161" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.compose;" parent="1" vertex="1">
                     <mxGeometry x="1051.5" y="934.37" width="29.099999999999998" height="29.099999999999998" as="geometry"/>
                 </mxCell>
-                <mxCell id="162" value="50%" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="162" value="50%" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="254.10000000000002" y="1030" width="50" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="163" value="100%" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="163" value="100%" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="409.1" y="1030" width="50" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="164" value="30%" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="164" value="30%" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="260" y="1122" width="50" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="165" value="10%" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="165" value="10%" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="405" y="1122" width="50" height="30" as="geometry"/>
                 </mxCell>
             </root>
