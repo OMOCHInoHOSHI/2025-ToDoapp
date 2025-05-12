@@ -1,1 +1,9 @@
 /* タスクカードのスタイル */
+
+.task-card {
+  background-color: #e97cda;    /* 背景色 */
+  display: flex;           /* フレックスボックスを使用 */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  padding: 16px;        /* 内側の余白 */
+}
