@@ -2,6 +2,7 @@
 
 .task-card {
   background-color: #e97cda;    /* 背景色 */
+  border: 1px solid #8cc152; /* 枠線 */
   display: flex;           /* フレックスボックスを使用 */
   /* flex-direction: column; */
   /* justify-content: space-between; */
