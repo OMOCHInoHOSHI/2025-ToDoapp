@@ -59,5 +59,6 @@ export interface CreateTaskInput {
     name: string;
     content?: string;
     genre: string;
+    progress: number;
     dueDate: Date;
 }
