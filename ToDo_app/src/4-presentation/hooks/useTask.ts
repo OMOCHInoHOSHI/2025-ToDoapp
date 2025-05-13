@@ -20,7 +20,7 @@ export const useTask = () => {
     };
 
     // タスク作成の呼び出し
-    const createTask = async (input: { name: string; content?: string; genre: string; dueDate: Date }) => {
+    const createTask = async (input: { name: string; content?: string; genre: string; progress: number; dueDate: Date }) => {
         const useCase = new UseCaseCreateTask(taskRepository);
         await useCase.Use_CreateTask(input);
         await fetchTasks(); // タスクを再取得して更新

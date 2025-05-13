@@ -57,7 +57,8 @@ export class UseCaseCreateTask {
 // ユースケースの入力データ型
 export interface CreateTaskInput {
     name: string;
-    content?: string;
+    content?: string | undefined;
     genre: string;
+    progress: number;
     dueDate: Date;
 }
