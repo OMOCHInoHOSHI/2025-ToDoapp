@@ -2,11 +2,14 @@
 
 import React, { useState } from 'react';
 import TaskInput from '../components/Task_Input';
-
+import { useTask } from '../hooks/useTask';
 
 export const TaskCreateScreen = () => {
 
+    const { createTask } = useTask();   // useTaskフックを使用してタスク作成関数を取得
+
     // タスクの状態を管理するためのuseStateフック
+    // 入力を管理
     const [taskName, setTaskName] = useState<string>('');
     const [taskContent, setTaskContent] = useState<string>('');
     const [taskGenre, setTaskGenre] = useState<string>('');
@@ -14,9 +17,22 @@ export const TaskCreateScreen = () => {
     const [taskDueDate, setTaskDueDate] = useState<Date>(new Date());
 
     // タスク作成処理
-    const handleCreateTask = () => {
+    const handleCreateTask = (e: React.FormEvent) => {
+
+        // フォームのデフォルトの送信動作を防ぐ //ページのリロードを防ぐ
+        e.preventDefault();
+
         // タスク作成処理をここに実装
         console.log('タスク作成:', { taskName, taskContent, taskGenre, taskProgress, taskDueDate });
+
+        // タスク作成関数を呼び出す
+        createTask({
+            name: taskName,
+            content: taskContent,
+            genre: taskGenre,
+            progress: taskProgress,
+            dueDate: taskDueDate,
+        });
     };
 
     return (
