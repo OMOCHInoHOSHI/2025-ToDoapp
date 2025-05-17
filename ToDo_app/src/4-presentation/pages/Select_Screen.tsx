@@ -26,8 +26,8 @@ export const SelectScreen = () => {
     <div>
         <h1>操作選択画面</h1>
         <div>
-            <TaskButton label="タスクタスク作成" onClick={nav_TaskLitView} />
-            <TaskButton label="タスク一覧" onClick={nav_Createtask} />
+            <TaskButton label="タスクタスク作成" onClick={nav_Createtask} />
+            <TaskButton label="タスク一覧" onClick={nav_TaskLitView} />
         </div>
     </div>
     );
