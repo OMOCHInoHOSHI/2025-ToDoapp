@@ -23,7 +23,6 @@ export const useTask = () => {
     const createTask = async (input: { name: string; content?: string; genre: string; progress: number; dueDate: Date }) => {
         const useCase = new UseCaseCreateTask(taskRepository);
         await useCase.Use_CreateTask(input);
-        await fetchTasks(); // タスクを再取得して更新
     };
 
     // タスク削除の呼び出し
