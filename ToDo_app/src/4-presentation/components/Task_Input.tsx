@@ -3,7 +3,7 @@
 
 // import React, { useState } from 'react';
 import './Task_Input.css'; // スタイルを適用
-import { Input_Props } from '../shared/InputProps';
+import { Props_Input } from '../shared/InputProps';
 
 // TaskInputコンポーネントの型定義S------------------------------------------
 
@@ -25,7 +25,7 @@ import { Input_Props } from '../shared/InputProps';
 
 
 // TaskInputコンポーネント
-const TaskInput: React.FC<Input_Props> = ({ label, type, value, onChange }) => {
+const TaskInput: React.FC<Props_Input> = ({ label, type, value, onChange }) => {
   // 入力値を HTMLInputElement に適した型に変換
   let inputValue: string | number;
 
