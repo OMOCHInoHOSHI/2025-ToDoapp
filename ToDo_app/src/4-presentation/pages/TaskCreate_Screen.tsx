@@ -22,6 +22,14 @@ export const TaskCreateScreen = () => {
         // フォームのデフォルトの送信動作を防ぐ //ページのリロードを防ぐ
         e.preventDefault();
 
+
+        // 入力値の必須チェック
+        // タスク内容以外が必須
+        if (!taskName || !taskGenre || taskProgress < 0 || !taskDueDate) {
+            alert('必須項目が未入力です。');
+            return;
+        }
+
         // タスク作成処理をここに実装
         console.log('タスク作成:', { taskName, taskContent, taskGenre, taskProgress, taskDueDate });
 
