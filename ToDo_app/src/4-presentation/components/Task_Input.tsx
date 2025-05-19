@@ -3,15 +3,10 @@
 
 // import React, { useState } from 'react';
 import './Task_Input.css'; // スタイルを適用
+import { Input_Props } from '../shared/InputProps';
 
 // TaskInputコンポーネントの型定義S------------------------------------------
 
-type Input_Props = {
-    label: string;
-    type: 'text' | 'number' | 'date';
-    value: string | number | Date;
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
 
 // type Input_String  = {
 //     input_string: string; // 入力された文字列
