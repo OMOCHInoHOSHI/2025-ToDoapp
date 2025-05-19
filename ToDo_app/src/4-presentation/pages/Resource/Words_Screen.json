@@ -1,4 +1,5 @@
 {
+    "TaskCreate": "タスク作成",
     "TaskRedo": "タスク読み込み",
     "TaskUpdate": "タスク更新",
     "TaskDelete": "タスク削除",
