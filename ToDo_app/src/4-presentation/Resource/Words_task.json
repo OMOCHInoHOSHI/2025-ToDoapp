@@ -10,6 +10,9 @@
     "Taskfinushflag": "タスク完了フラグ",
     "createtime": "作成日時",
     "progress": "進捗度",
+    "duedate": "期限",
+    "genre": "ジャンル",
+    "content": "内容",
     "TaskCreate": "タスク作成",
     "Notask": "タスクがありません"
 }

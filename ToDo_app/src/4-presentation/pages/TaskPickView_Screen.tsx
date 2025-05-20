@@ -5,7 +5,7 @@ import { useTask } from '../hooks/useTask';
 import TaskButton from '../components/Task_Button';
 import TaskCard from '../components/Task_Card';
 import { useNavigate, useLocation } from 'react-router-dom';
-import WordScreen from './Resource/Words_Screen.json';
+import WordScreen from '../Resource/Words_Screen.json';
 // import WordTask from './Resource/Words_task.json';
 
 export const TaskPickScreen: React.FC = () => {

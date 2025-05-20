@@ -4,6 +4,8 @@
 import React from 'react';
 import './Task_Card.css'; // スタイルを適用
 import { Props_Card } from '../shared/CardProps';
+import WordTask from '../Resource/Words_task.json';
+// import WordScreen from '../Resource/Words_Screen.json';
 
 // TaskCardコンポーネントの型定義S------------------------------------------
 // 選択時のカードの型
@@ -34,37 +36,49 @@ import { Props_Card } from '../shared/CardProps';
 
 // TaskCardコンポーネント
 // TaskCardコンポーネント
-const TaskCard: React.FC<Props_Card> = ({ taskName, taskCreatetime, taskProgress, onClick }) => {
+const TaskCard: React.FC<Props_Card> = ({ taskName, taskCreatetime, taskProgress, taskContent, taskGenre, taskDueDate, onClick , cardsize="mini" }) => {
 
     // タスクの進捗度に応じてクラス名を変更
     const progressClass = taskProgress === 100 ? "task-card-finish" : "task-card-unfinish";
+
+    const styleMap = {
+    mini: { width: '300px', height: '100px' },
+    big: { width: '500px', height: '500px' },
+    };
+
+    // カードが小さいときの内容
+    const miniTask = (
+        <>
+            <div>{WordTask.Taskname}: {taskName}</div>
+            <div>{WordTask.createtime}: {new Date(taskCreatetime).toLocaleString()}</div>
+            <div>{WordTask.progress}: {taskProgress}%</div>
+        </>
+    );
+
+    // カードが大きいときの内容
+    const bigTask = (
+        <>
+            <div>{WordTask.Taskname}: {taskName}</div>
+            <div>{WordTask.content}: {taskContent}</div>
+            <div>{WordTask.genre}: {taskGenre}</div>
+            <div>{WordTask.progress}: {taskProgress}%</div>
+            <div>{WordTask.duedate}: {taskDueDate?.toLocaleString()}</div>
+            <div>{WordTask.createtime}: {new Date(taskCreatetime).toLocaleString()}</div>
+        </>
+    );
 
     return (
         <button
             className={`${progressClass}`}
             onClick={onClick}
-            style={{
-                width: '300px',
-                height: '200px',
-                // display: 'flex',
-                // flexDirection: 'column',
-                // justifyContent: 'center',
-                // alignItems: 'flex-start',
-                // padding: '16px',
-                // textAlign: 'left',
-            }}
+            style={styleMap[cardsize]} // cardsizeに応じたスタイルを適用
         >
-            <div style={{ fontWeight: 'bold', fontSize: '1.2em', marginBottom: '8px' }}>
-                {taskName}
-            </div>
-            <div style={{ color: '#666', marginBottom: '8px' }}>
-                作成日時: {new Date(taskCreatetime).toLocaleString()}
-            </div>
-            <div>
-                進捗: {taskProgress}%
-            </div>
+            {/* 大きさに応じたスタイルを適用 */}
+            {cardsize === 'mini' ? miniTask : bigTask}
+
         </button>
     );
 }
+
 
 export default TaskCard;

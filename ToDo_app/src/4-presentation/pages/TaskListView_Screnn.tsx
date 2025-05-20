@@ -4,8 +4,8 @@ import React, { useEffect } from 'react';
 import { useTask } from '../hooks/useTask';
 import TaskButton from '../components/Task_Button';
 import TaskCard from '../components/Task_Card';
-import WordScreen from './Resource/Words_Screen.json';
-import WordTask from './Resource/Words_task.json';
+import WordScreen from '../Resource/Words_Screen.json';
+import WordTask from '../Resource/Words_task.json';
 import { useNavigate } from 'react-router-dom';
 
 

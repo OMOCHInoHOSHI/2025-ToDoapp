@@ -4,7 +4,7 @@ import React from 'react';
 import TaskButton from '../components/Task_Button';
 // import { useTask } from '../hooks/useTask';
 import { useNavigate } from 'react-router-dom';
-import WordsScreen from './Resource/Words_Screen.json';
+import WordsScreen from '../Resource/Words_Screen.json';
 
 
 export const SelectScreen = () => {

@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import TaskInput from '../components/Task_Input';
 import TaskTextArea from '../components/Task_TextArea';
 import { useTask } from '../hooks/useTask';
-import Wordstask from './Resource/Words_task.json'
-import WordScreen from './Resource/Words_Screen.json';
+import Wordstask from '../Resource/Words_task.json'
+import WordScreen from '../Resource/Words_Screen.json';
 
 
 export const TaskCreateScreen = () => {
