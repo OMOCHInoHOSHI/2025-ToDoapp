@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useTask } from '../hooks/useTask';
-// import TaskButton from '../components/Task_Button';
+import TaskButton from '../components/Task_Button';
 import TaskCard from '../components/Task_Card';
 import WordScreen from './Resource/Words_Screen.json';
 import WordTask from './Resource/Words_task.json';
@@ -18,7 +18,18 @@ export const TaskListView: React.FC = () => {
 
     return (
         <div>
+
             <h1>{WordScreen.TaskList}{WordScreen.Screen}</h1>
+
+            <p>
+            {/* 編集・削除ボタン */}
+            <TaskButton
+                label={WordScreen.EditandDelete}
+                onClick={() => console.log('編集・削除ボタンがクリックされました')}
+            />
+            </p>
+
+
             {tasks.length === 0 ? (
                 <h3>{WordTask.Notask}</h3>
             ) : (
