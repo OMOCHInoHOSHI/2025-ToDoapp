@@ -1,4 +1,5 @@
 {
+    "CreateScreen": "タスク作成画面",
     "Taskcreatetime": "タスク作成時間",
     "Taskid": "タスクID",
     "Taskname": "タスク名",
@@ -6,6 +7,6 @@
     "taskGenre": "タスクジャンル",
     "TaskProgress": "タスク進捗度",
     "TaskDueDate": "タスク期限",
-    "Taskfinushflag": "タスク完了フラグ"
-
+    "Taskfinushflag": "タスク完了フラグ",
+    "TaskCreate": "タスク作成"
 }

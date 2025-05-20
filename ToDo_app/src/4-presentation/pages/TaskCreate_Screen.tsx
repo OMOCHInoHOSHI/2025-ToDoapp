@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import TaskInput from '../components/Task_Input';
 import TaskTextArea from '../components/Task_TextArea';
 import { useTask } from '../hooks/useTask';
+import Wordstask from './Resource/Words_task.json'
 
 
 export const TaskCreateScreen = () => {
@@ -47,14 +48,14 @@ export const TaskCreateScreen = () => {
 
     return (
         <div>
-            <h1>タスク作成画面</h1>
+            <h1>{Wordstask.CreateScreen}</h1>
             <form onSubmit={handleCreateTask}>
-                <TaskInput label="タスク名" type="text" value={taskName} onChange={(e) => setTaskName(e.target.value)} />
-                <TaskTextArea label="タスク内容" type="text" value={taskContent} onChange={(e) => setTaskContent(e.target.value)} />
-                <TaskInput label="ジャンル" type="text" value={taskGenre} onChange={(e) => setTaskGenre(e.target.value)} />
-                <TaskInput label="進捗度" type="number" value={taskProgress} onChange={(e) => setTaskProgress(Number(e.target.value))} />
-                <TaskInput label="期限" type="date" value={taskDueDate} onChange={(e) => setTaskDueDate(new Date(e.target.value))} />
-                <button type="submit">タスク作成</button>
+                <TaskInput label={Wordstask.Taskname} type="text" value={taskName} onChange={(e) => setTaskName(e.target.value)} />
+                <TaskTextArea label={Wordstask.TaskContent} type="text" value={taskContent} onChange={(e) => setTaskContent(e.target.value)} />
+                <TaskInput label={Wordstask.taskGenre} type="text" value={taskGenre} onChange={(e) => setTaskGenre(e.target.value)} />
+                <TaskInput label={Wordstask.TaskProgress} type="number" value={taskProgress} onChange={(e) => setTaskProgress(Number(e.target.value))} />
+                <TaskInput label={Wordstask.TaskDueDate} type="date" value={taskDueDate} onChange={(e) => setTaskDueDate(new Date(e.target.value))} />
+                <button type="submit">{Wordstask.TaskCreate}</button>
             </form>
         </div>
     );
