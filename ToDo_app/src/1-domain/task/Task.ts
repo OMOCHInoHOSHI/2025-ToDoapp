@@ -9,6 +9,7 @@ import { TaskGenre } from "./Task_Genre";
 import { TaskProgress } from "./Task_Progress";
 import { TaskDueDate } from "./Task_DueDate";
 import { TaskFinishFlag } from "./Task_FinishFlag";
+import { TaskDto } from "../../2-application/dto/TaskDto";
 
 export class Task {
 
@@ -79,6 +80,20 @@ export class Task {
     }
     // ゲッターE---------------------------------------------------------
 
+
+    // jsonからTaskを生成するファクトリメソッド
+    static fromJSON(json: TaskDto): Task {
+        return new Task(
+            new TaskCreateTime(new Date(json.taskCreateTime)),
+            new TaskID(json.taskID),
+            new TaskName(json.taskName),
+            json.taskContent ? new TaskContent(json.taskContent) : undefined,
+            new TaskGenre(json.taskGenre),
+            new TaskProgress(json.taskProgress),
+            new TaskDueDate(new Date(json.taskDueDate)),
+            new TaskFinishFlag(json.taskFinishFlag)
+        );
+    }
 
     // タスク進捗度が100%の時、完了ステータスを完了にする
     // ビジネスルール
