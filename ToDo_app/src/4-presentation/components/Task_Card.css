@@ -1,10 +1,19 @@
 /* タスクカードのスタイル */
 
 .task-card {
-  background-color: #e97cda;    /* 背景色 */
+  /* background-color: #e97cda;    背景色 */
   border: 1px solid #8cc152; /* 枠線 */
   display: flex;           /* フレックスボックスを使用 */
   /* flex-direction: column; */
   /* justify-content: space-between; */
   padding: 16px;        /* 内側の余白 */
+}
+
+.task-card-finish {
+  background-color: #453fe8; /* 完了タスクの背景色 */
+  border: 2px solid #8cc152; /* 完了タスクの枠線 */
+}
+
+.task-card-unfinish {
+  background-color: #eda0e7; /* 未完了タスクの背景色 */
 }
