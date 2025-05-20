@@ -6,12 +6,13 @@ import TaskButton from '../components/Task_Button';
 import TaskCard from '../components/Task_Card';
 import WordScreen from './Resource/Words_Screen.json';
 import WordTask from './Resource/Words_task.json';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 // タスク一覧画面
 export const TaskListScreen: React.FC = () => {
     const { tasks, fetchTasks } = useTask();
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchTasks();
@@ -28,7 +29,11 @@ export const TaskListScreen: React.FC = () => {
                 label={WordScreen.EditandDelete}
                 width='150px'
                 height='50px'
-                onClick={() => console.log('編集・削除ボタンがクリックされました')}
+                onClick={() => {
+                    console.log('編集・削除ボタンがクリックされました');
+                    navigate('/');
+                }}
+
             />
             </p>
 
@@ -43,7 +48,15 @@ export const TaskListScreen: React.FC = () => {
                             taskName={task.taskName}
                             taskCreatetime={task.taskCreateTime}
                             taskProgress={task.taskProgress}
-                            onClick={() => console.log(`タスクID: ${task.taskID}がクリックされました`)}
+                            onClick={() => {
+                                console.log(`タスクID: ${task.taskID}がクリックされました`)
+                                navigate('/taskpickscreen', {
+                                    state: {
+                                        taskID: task.taskID
+                                    }
+                                });
+                            }
+                            }
                         />
                     ))}
                 </div>
