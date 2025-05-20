@@ -5,6 +5,7 @@ import TaskInput from '../components/Task_Input';
 import TaskTextArea from '../components/Task_TextArea';
 import { useTask } from '../hooks/useTask';
 import Wordstask from './Resource/Words_task.json'
+import WordScreen from './Resource/Words_Screen.json';
 
 
 export const TaskCreateScreen = () => {
@@ -48,7 +49,7 @@ export const TaskCreateScreen = () => {
 
     return (
         <div>
-            <h1>{Wordstask.CreateScreen}</h1>
+            <h1>{Wordstask.TaskCreate}{WordScreen.Screen}</h1>
             <form onSubmit={handleCreateTask}>
                 <TaskInput label={Wordstask.Taskname} type="text" value={taskName} onChange={(e) => setTaskName(e.target.value)} />
                 <TaskTextArea label={Wordstask.TaskContent} type="text" value={taskContent} onChange={(e) => setTaskContent(e.target.value)} />

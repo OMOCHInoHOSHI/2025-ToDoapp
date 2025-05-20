@@ -8,5 +8,6 @@
     "TaskProgress": "タスク進捗度",
     "TaskDueDate": "タスク期限",
     "Taskfinushflag": "タスク完了フラグ",
-    "TaskCreate": "タスク作成"
+    "TaskCreate": "タスク作成",
+    "Notask": "タスクがありません"
 }
