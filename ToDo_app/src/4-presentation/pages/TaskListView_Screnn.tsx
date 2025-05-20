@@ -25,6 +25,8 @@ export const TaskListView: React.FC = () => {
             {/* 編集・削除ボタン */}
             <TaskButton
                 label={WordScreen.EditandDelete}
+                width='150px'
+                height='50px'
                 onClick={() => console.log('編集・削除ボタンがクリックされました')}
             />
             </p>
