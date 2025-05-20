@@ -35,9 +35,13 @@ import { Props_Card } from '../shared/CardProps';
 // TaskCardコンポーネント
 // TaskCardコンポーネント
 const TaskCard: React.FC<Props_Card> = ({ taskName, taskCreatetime, taskProgress, onClick }) => {
+
+    // タスクの進捗度に応じてクラス名を変更
+    const progressClass = taskProgress === 100 ? "task-card-finish" : "task-card-unfinish";
+
     return (
         <button
-            className="task-card"
+            className={`${progressClass}`}
             onClick={onClick}
             style={{
                 width: '300px',
