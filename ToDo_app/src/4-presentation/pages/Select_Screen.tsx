@@ -12,7 +12,7 @@ export const SelectScreen = () => {
 
   // タスク一覧画面に遷移
     const nav_TaskLitView = () => {
-    // navigate('/vistew');
+        navigate('/tasklistview');
     };
 
     // タスク作成画面に遷移
