@@ -7,7 +7,7 @@ import WordScreen from '../Resource/Words_Screen.json';
 import WordTask from '../Resource/Words_task.json';
 
 export const EditTaskScreen: React.FC = () => {
-    const { tasks, updateTask } = useTask();
+    const { tasks, updateTask ,deleteTask} = useTask();
     const navigate = useNavigate();
 
     // 遷移時に渡されたタスクIDを取得
@@ -121,6 +121,7 @@ export const EditTaskScreen: React.FC = () => {
                     height='50px'
                     onClick={() => {
                         console.log('削除ボタンがクリックされました');
+                        deleteTask(taskID); // タスクを削除
                         navigate('/tasklistscreen');
                     }}
                 />
