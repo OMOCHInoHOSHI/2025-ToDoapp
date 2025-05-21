@@ -6,6 +6,7 @@ import { TaskDto } from "../../2-application/dto/TaskDto";
 import { TaskMapper } from "../../2-application/dto/TaskDtoMapper";
 import { LocalStorageTaskRepository } from "../../3-infrastructure/task/Inter_LocalSave";
 import { UseCaseCreateTask } from "../../2-application/task/usecases/UseCase_Createtask";
+import { UseCaseDeleteTask } from "../../2-application/task/usecases/UseCase_DeleteTask";
 
 // タスクの取得、作成、削除を行うためのカスタムフック
 export const useTask = () => {
@@ -26,11 +27,11 @@ export const useTask = () => {
     };
 
     // タスク削除の呼び出し
-//     const deleteTask = async (taskId: string) => {
-//         const useCase = new UseCaseDeleteTask(taskRepository); // 削除用のユースケースを使用
-//         await useCase.Use_DeleteTask(taskId); // taskId を直接渡す
-//         await fetchTasks(); // タスクを再取得して更新
-// };
+    const deleteTask = async (taskId: string) => {
+        const useCase = new UseCaseDeleteTask(taskRepository); // 削除用のユースケースを使用
+        await useCase.Use_DeleteTask({ taskId });
+        await fetchTasks(); // タスクを再取得して更新
+};
 
     // 初回レンダリング時にタスクを取得
     useEffect(() => {
@@ -44,6 +45,6 @@ export const useTask = () => {
         tasks,
         fetchTasks,
         createTask,
-        // deleteTask,
+        deleteTask,
     };
 };

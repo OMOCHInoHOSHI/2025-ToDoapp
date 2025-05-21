@@ -1,18 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { useTask } from '../hooks/useTask';
 import TaskInput from '../components/Task_Input';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import TaskButton from '../components/Task_Button';
 import WordScreen from '../Resource/Words_Screen.json';
 import WordTask from '../Resource/Words_task.json';
 
 export const EditTaskScreen: React.FC = () => {
-    const { taskId } = useParams<{ taskId: string }>();
     const { tasks, updateTask } = useTask();
     const navigate = useNavigate();
 
+    // 遷移時に渡されたタスクIDを取得
+    const location = useLocation();
+    const taskID = location.state?.taskID;
+
+    console.log("タスクID:", taskID);
+
     // 編集対象タスクを取得
-    const task = tasks.find(t => t.taskID === taskId);
+    const task = tasks.find(t => t.taskID === taskID);
+
+    // if (!task) {
+    //     return <div>読み込み中...</div>;
+    // }
 
     // 初期値をuseStateで管理
     const [name, setName] = useState(task?.taskName || "");
@@ -33,7 +42,7 @@ export const EditTaskScreen: React.FC = () => {
 
     const handleSubmit = async () => {
         await updateTask({
-            taskID: taskId,
+            // taskID: taskId,
             name,
             content,
             genre,
