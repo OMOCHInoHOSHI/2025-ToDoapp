@@ -11,5 +11,7 @@
     "New": "新規登録はこちら",
     "TaskPick": "タスク個別表示",
     "Screen": "画面",
-    "EditandDelete": "編集・削除"
+    "Edit": "編集",
+    "Delete": "削除",
+    "back": "戻る"
 }

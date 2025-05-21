@@ -26,7 +26,7 @@ export const TaskListScreen: React.FC = () => {
             <p>
             {/* 編集・削除ボタン */}
             <TaskButton
-                label={WordScreen.EditandDelete}
+                label={`${WordScreen.Edit}・${WordScreen.Delete}`}
                 width='150px'
                 height='50px'
                 onClick={() => {

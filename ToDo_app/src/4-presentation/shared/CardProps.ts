@@ -8,6 +8,6 @@ export type Props_Card = {
     onClick: () => void; // カードがクリックされたときの処理
     taskContent?: string; // タスク内容（省略可能）
     taskGenre?: string;   // ジャンル（省略可能）
-    taskDueDate?: Date;  // 期限（省略可能）
+    taskDueDate?: string;  // 期限（省略可能）
     cardsize?: 'mini' | 'big'; // cardsizeの型
 }
