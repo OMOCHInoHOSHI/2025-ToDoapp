@@ -36,7 +36,7 @@ export class LocalStorageTaskRepository implements TaskRepository {
     return (JSON.parse(tasks) as TaskDto[]).map((taskData) => Task.fromJSON(taskData));
 }
 
-    // タスクを更新する
+    // タスクを更新(編集)する
     public async UpdateTask(task: Task): Promise<void> {
         const tasks = await this.FindAll();
         const updatedTasks = tasks.map(t => t.TaskID.TaskID === task.TaskID.TaskID ? task : t);
