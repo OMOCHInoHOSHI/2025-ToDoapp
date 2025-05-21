@@ -23,12 +23,15 @@ export const EditTaskScreen: React.FC = () => {
     //     return <div>読み込み中...</div>;
     // }
 
+    // 日付をYYYY-MM-DD形式に変換する関数
+    const formatDate = (date: Date) => date.toISOString().slice(0, 10);
+
     // 初期値をuseStateで管理
     const [name, setName] = useState(task?.taskName || "");
     const [content, setContent] = useState(task?.taskContent || "");
     const [genre, setGenre] = useState(task?.taskGenre || "");
     const [progress, setProgress] = useState(task?.taskProgress || 0);
-    const [dueDate, setDueDate] = useState(task?.taskDueDate || "");
+    const [dueDate, setDueDate] = useState(task ? formatDate(new Date(task.taskDueDate)) : "");
 
     useEffect(() => {
         if (task) {
@@ -36,7 +39,7 @@ export const EditTaskScreen: React.FC = () => {
             setContent(task.taskContent || "");
             setGenre(task.taskGenre);
             setProgress(task.taskProgress);
-            setDueDate(task.taskDueDate);
+            setDueDate(formatDate(new Date(task.taskDueDate))); // YYYY-MM-DD形式に変換
         }
     }, [task]);
 
