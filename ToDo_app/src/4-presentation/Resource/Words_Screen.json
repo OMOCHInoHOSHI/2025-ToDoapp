@@ -1,0 +1,17 @@
+{
+    "TaskCreate": "タスク作成",
+    "TaskList": "タスク一覧",
+    "TaskRedo": "タスク読み込み",
+    "TaskUpdate": "タスク更新",
+    "TaskDelete": "タスク削除",
+    "TaskSave": "タスク保存",
+    "TaskEdit": "タスク編集",
+    "selectscreen": "選択画面",
+    "Login": "ログイン",
+    "New": "新規登録はこちら",
+    "TaskPick": "タスク個別表示",
+    "Screen": "画面",
+    "Edit": "編集",
+    "Delete": "削除",
+    "back": "戻る"
+}

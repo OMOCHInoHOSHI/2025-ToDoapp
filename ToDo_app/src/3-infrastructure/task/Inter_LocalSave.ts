@@ -3,6 +3,8 @@
 import { Task } from "../../1-domain/task/Task";
 import { TaskID } from "../../1-domain/task/Task_ID";
 import { TaskRepository } from "../../1-domain/task/Task_Repository";
+import { TaskDto } from "../../2-application/dto/TaskDto";
+import { TaskMapper } from "../../2-application/dto/TaskDtoMapper";
 
 export class LocalStorageTaskRepository implements TaskRepository {
 
@@ -10,10 +12,11 @@ export class LocalStorageTaskRepository implements TaskRepository {
 
     // タスクを保存する
     public async SaveTask(task: Task): Promise<void> {
-        const tasks = await this.FindAll(); // 既存のタスクを取得
-        tasks.push(task); // 新しいタスクを追加
-        localStorage.setItem(this.storageKey, JSON.stringify(tasks)); // ローカルストレージに保存
-    }
+    const tasks = await this.FindAll();
+    tasks.push(task);
+    // DTO形式で保存
+    localStorage.setItem(this.storageKey, JSON.stringify(tasks.map(t => TaskMapper.toDto(t))));
+}
 
     // タスクを取得する
     public async FindTaskId(taskId: TaskID): Promise<Task | null> {
@@ -23,10 +26,15 @@ export class LocalStorageTaskRepository implements TaskRepository {
     }
 
     // タスクを全て取得する
+    // public async FindAll(): Promise<Task[]> {
+    //     const tasks = localStorage.getItem(this.storageKey); // ローカルストレージから取得
+    //     return tasks ? JSON.parse(tasks) : []; // 取得したタスクをパースして返す
+    // }/
     public async FindAll(): Promise<Task[]> {
-        const tasks = localStorage.getItem(this.storageKey); // ローカルストレージから取得
-        return tasks ? JSON.parse(tasks) : []; // 取得したタスクをパースして返す
-    }
+    const tasks = localStorage.getItem(this.storageKey);
+    if (!tasks) return [];
+    return (JSON.parse(tasks) as TaskDto[]).map((taskData) => Task.fromJSON(taskData));
+}
 
     // タスクを更新する
     public async UpdateTask(task: Task): Promise<void> {

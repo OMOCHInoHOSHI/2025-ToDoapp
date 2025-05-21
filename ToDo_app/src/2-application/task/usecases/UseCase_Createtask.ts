@@ -31,7 +31,7 @@ export class UseCaseCreateTask {
         const taskName = new TaskName(input.name);
         const taskContent = input.content ? new TaskContent(input.content) : undefined;
         const taskGenre = new TaskGenre(input.genre);
-        const taskProgress = new TaskProgress(0); // 初期進捗度は0%
+        const taskProgress = new TaskProgress(input.progress);
         const taskDueDate = new TaskDueDate(input.dueDate);
         const taskFinishFlag = new TaskFinishFlag(false); // 初期状態は未完了
 

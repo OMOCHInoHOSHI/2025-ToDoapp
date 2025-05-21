@@ -1,0 +1,23 @@
+/* テキストエリアのスタイル */
+
+.task-textarea {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.task-textarea label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.task-textarea textarea {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  resize: vertical; /* ユーザーが縦方向にリサイズ可能 */
+  min-height: 100px; /* 初期の高さを指定 */
+  line-height: 1.5; /* 行間を広めに */
+  font-family: inherit; /* フォントを親に合わせる */
+}
