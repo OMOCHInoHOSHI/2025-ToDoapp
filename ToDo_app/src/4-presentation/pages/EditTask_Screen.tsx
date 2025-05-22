@@ -45,7 +45,7 @@ export const EditTaskScreen: React.FC = () => {
 
     const handleSubmit = async () => {
         await updateTask({
-            // taskID: taskId,
+            taskId: taskID,
             name,
             content,
             genre,
@@ -77,31 +77,31 @@ export const EditTaskScreen: React.FC = () => {
             </p>
 
             <TaskInput
-                label="タスク名"
+                label={WordTask.Taskname}
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
             <TaskInput
-                label="タスク内容"
+                label={WordTask.TaskContent}
                 type="text"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
             />
             <TaskInput
-                label="タスクジャンル"
+                label={WordTask.taskGenre}
                 type="text"
                 value={genre}
                 onChange={(e) => setGenre(e.target.value)}
             />
             <TaskInput
-                label="タスク進捗"
+                label={WordTask.TaskProgress}
                 type="number"
                 value={progress}
                 onChange={(e) => setProgress(Number(e.target.value))}
             />
             <TaskInput
-                label="タスク期限"
+                label={WordTask.TaskDueDate}
                 type="date"
                 value={dueDate}
                 onChange={(e) => setDueDate(e.target.value)}
