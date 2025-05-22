@@ -32,10 +32,18 @@ const TaskInput: React.FC<Props_Input> = ({ label, type, value, onChange }) => {
     // 日付型の場合は、DateオブジェクトをISO形式の文字列に変換
     // それ以外はそのまま文字列または数値として扱う
     if (type === 'date') {
-        inputValue = value instanceof Date ? value.toISOString().split('T')[0] : '';
+    // すでに string の場合はそのまま使う
+    if (typeof value === 'string') {
+        inputValue = value;
+    } else if (value instanceof Date) {
+        inputValue = value.toISOString().split('T')[0];
+    } else {
+        inputValue = '';
+    }
     } else {
         inputValue = value as string | number;
     }
+
 
     return (
         <div className="task-input">

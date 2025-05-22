@@ -36,18 +36,18 @@ export class LocalStorageTaskRepository implements TaskRepository {
     return (JSON.parse(tasks) as TaskDto[]).map((taskData) => Task.fromJSON(taskData));
 }
 
-    // タスクを更新する
+    // タスクを更新(編集)する
     public async UpdateTask(task: Task): Promise<void> {
-        const tasks = await this.FindAll(); // すべてのタスクを取得
-        const updatedTasks = tasks.map(t => t.TaskID.TaskID === task.TaskID.TaskID ? task : t); // タスクIDでフィルタリングして更新
-        localStorage.setItem(this.storageKey, JSON.stringify(updatedTasks)); // ローカルストレージに保存
+        const tasks = await this.FindAll();
+        const updatedTasks = tasks.map(t => t.TaskID.TaskID === task.TaskID.TaskID ? task : t);
+        localStorage.setItem(this.storageKey, JSON.stringify(updatedTasks.map(t => TaskMapper.toDto(t))));
     }
 
 
     // タスクを削除する
     public async DeleteTask(taskId: TaskID): Promise<void> {
-        const tasks = await this.FindAll(); // すべてのタスクを取得
-        const updatedTasks = tasks.filter(task => task.TaskID.TaskID !== taskId.TaskID); // タスクIDでフィルタリング
-        localStorage.setItem(this.storageKey, JSON.stringify(updatedTasks)); // ローカルストレージに保存
+        const tasks = await this.FindAll();
+        const updatedTasks = tasks.filter(task => task.TaskID.TaskID !== taskId.TaskID);
+        localStorage.setItem(this.storageKey, JSON.stringify(updatedTasks.map(t => TaskMapper.toDto(t))));
     }
 }

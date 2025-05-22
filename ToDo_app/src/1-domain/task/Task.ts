@@ -80,6 +80,40 @@ export class Task {
     }
     // ゲッターE---------------------------------------------------------
 
+    // セッターS---------------------------------------------------------
+
+    set TaskID(taskID: TaskID) {
+        this._taskID = taskID;
+    }
+
+    set TaskCreateTime(taskCreateTime: TaskCreateTime) {
+        this._taskCreateTime = taskCreateTime;
+    }
+
+    set TaskName(taskName: TaskName) {
+        this._taskName = taskName;
+    }
+
+    set TaskContent(taskContent: TaskContent | undefined) {
+        this._taskContent = taskContent;
+    }
+
+    set TaskGenre(taskGenre: TaskGenre) {
+        this._taskGenre = taskGenre;
+    }
+
+    set TaskProgress(taskProgress: TaskProgress) {
+        this._taskProgress = taskProgress;
+    }
+
+    set TaskDueDate(taskDueDate: TaskDueDate) {
+        this._taskDueDate = taskDueDate;
+    }
+
+    set TaskFinishFlag(taskFinishFlag: TaskFinishFlag) {
+        this._taskFinishFlag = taskFinishFlag;
+    }
+    // セッターE---------------------------------------------------------
 
     // jsonからTaskを生成するファクトリメソッド
     static fromJSON(json: TaskDto): Task {
